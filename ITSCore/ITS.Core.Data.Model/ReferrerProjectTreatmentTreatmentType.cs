@@ -1,0 +1,9 @@
+﻿namespace ITS.Core.Data.Model
+{
+    public class ReferrerProjectTreatmentTreatmentType
+    {
+        public int ReferrerProjectTreatmentID { get; set; }
+        public int TreatmentTypeID { get; set; }
+        public string TreatmentTypeName { get; set; }
+    }
+}

@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D74377EF-667C-4F09-90C8-336318E9C8D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITS.Core.Data.SqlServer</RootNamespace>
+    <AssemblyName>ITS.Core.Data.SqlServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Library\External\EntityFramework\4.3\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AdditionalTestConfiguration.cs" />
+    <Compile Include="Configuration\AdmittedConfiguration.cs" />
+    <Compile Include="Configuration\AffectedAreaConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentCustomConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentDetailConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentDetailHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentPatientImpactConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentPatientImpactHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentProposedTreatmentMethodConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentProposedTreatmentMethodHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentTotalCountAndRatingConfiguration.cs" />
+    <Compile Include="Configuration\CaseBespokeServicePricingConfiguration.cs" />
+    <Compile Include="Configuration\CaseCommunicationHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseContactConfiguration.cs" />
+    <Compile Include="Configuration\CaseAppointmentDateConfiguration.cs" />
+    <Compile Include="Configuration\CaseDocumentConfiguration.cs" />
+    <Compile Include="Configuration\CaseNoteConfiguration.cs" />
+    <Compile Include="Configuration\CasePatientContactAttemptConfiguration.cs" />
+    <Compile Include="Configuration\CaseReferrerAssignedUserConfiguration.cs" />
+    <Compile Include="Configuration\CaseTreatmentPricingConfiguration.cs" />
+    <Compile Include="Configuration\CaseVATConfiguration.cs" />
+    <Compile Include="Configuration\CaseWorkflowPatientReferrerProjectConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentRatingConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentPatientInjuryConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseAssessmentPatientInjuryHistoryConfiguration.cs" />
+    <Compile Include="Configuration\CaseStopReasonConfiguration.cs" />
+    <Compile Include="Configuration\DrugTestConfiguration.cs" />
+    <Compile Include="Configuration\EmployeeDetailConfiguration.cs" />
+    <Compile Include="Configuration\EmploymentConfiguration.cs" />
+    <Compile Include="Configuration\EmploymentTypeConfiguration.cs" />
+    <Compile Include="Configuration\FitForWorkConfiguration.cs" />
+    <Compile Include="Configuration\GenderConfiguration.cs" />
+    <Compile Include="Configuration\GipConfiguration.cs" />
+    <Compile Include="Configuration\IipConfiguration.cs" />
+    <Compile Include="Configuration\InjuredPartyRepresentativeConfiguration.cs" />
+    <Compile Include="Configuration\InjuredRepresentativeOptionConfiguration.cs" />
+    <Compile Include="Configuration\InvoiceCollectionActionConfiguration.cs" />
+    <Compile Include="Configuration\InvoicePaymentConfiguration.cs" />
+    <Compile Include="Configuration\InvoiceConfiguration.cs" />
+    <Compile Include="Configuration\JobDemandConfiguration.cs" />
+    <Compile Include="Configuration\NetworkRailStandardApplicableConfiguration.cs" />
+    <Compile Include="Configuration\PasswordHistoryConfiguration.cs" />
+    <Compile Include="Configuration\PatientRoleConfiguration.cs" />
+    <Compile Include="Configuration\DurationConfiguration.cs" />
+    <Compile Include="Configuration\EmailTypeValueConfiguration.cs" />
+    <Compile Include="Configuration\PolicieConfiguration.cs" />
+    <Compile Include="Configuration\PolicyCriteriaConfiguration.cs" />
+    <Compile Include="Configuration\PolicyTypeConfiguration.cs" />
+    <Compile Include="Configuration\PrimaryConditionConfiguration.cs" />
+    <Compile Include="Configuration\ReasonForReferralConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerGroupConfiguration.cs" />
+    <Compile Include="Configuration\ReinsurerConfiguration.cs" />
+    <Compile Include="Configuration\RestrictionRangeConfiguration.cs" />
+    <Compile Include="Configuration\StrengthTestingConfiguration.cs" />
+    <Compile Include="Configuration\SymptomDescriptionConfiguration.cs" />
+    <Compile Include="Configuration\TpdConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoriesBespokeServiceConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryBespokeServiceConfiguration.cs" />
+    <Compile Include="Configuration\ProposedTreatmentMethodConfiguration.cs" />
+    <Compile Include="Configuration\PatientLevelOfRecoveryConfiguration.cs" />
+    <Compile Include="Configuration\PatientImpactOnWorkConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerDocumentConfiguration.cs" />
+    <Compile Include="Configuration\PatientImpactConfiguration.cs" />
+    <Compile Include="Configuration\PatientImpactValueConfiguration.cs" />
+    <Compile Include="Configuration\PatientWorkstatusConfiguration.cs" />
+    <Compile Include="Configuration\PsychologicalFactorConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerAuthorisationsConfiguration.cs" />
+    <Compile Include="Configuration\SupplierDistanceRankingConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentPeriodTypeConfiguration.cs" />
+    <Compile Include="Configuration\TypeCoverConfiguration.cs" />
+    <Compile Include="Configuration\UKPostCodeConfiguration.cs" />
+    <Compile Include="Configuration\PolicyOpenDetailConfiguration.cs" />
+    <Compile Include="Configuration\ElRehabConfiguration.cs" />
+    <Compile Include="Repository\AdditionalTestRepository.cs" />
+    <Compile Include="Repository\AdmittedRepository.cs" />
+    <Compile Include="Repository\AffectedAreaRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentCustomRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentDetailHistoryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentDetailRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentHistoryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentPatientImpactHistoryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentPatientImpactRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentPatientInjuryHistoryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentPatientInjuryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentProposedTreatmentMethodHistoryRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentProposedTreatmentMethodRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentTotalCountAndRatingRepository.cs" />
+    <Compile Include="Repository\CaseBespokeServicePricingRepository.cs" />
+    <Compile Include="Repository\CaseCommunicationHistoryRepository.cs" />
+    <Compile Include="Repository\CaseContactRepository.cs" />
+    <Compile Include="Configuration\AreasofExpertiseConfiguration.cs" />
+    <Compile Include="Configuration\AssessmentServiceConfiguration.cs" />
+    <Compile Include="Configuration\AssessmentTypeConfiguration.cs" />
+    <Compile Include="Configuration\CaseHistoryConfiguration.cs" />
+    <Compile Include="Configuration\PractitionerTreatmentRegistrationConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\BankHolidayConfiguration.cs" />
+    <Compile Include="Configuration\ComplaintStatusConfiguration.cs" />
+    <Compile Include="Configuration\ComplaintTypeConfiguration.cs" />
+    <Compile Include="Configuration\CaseConfiguration.cs" />
+    <Compile Include="Configuration\PractitionerRegistrationConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoriesAreasofExpertiseConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryAreasofExpetiseConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoriesRegistrationTypeConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryRegistrationTypeConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryTreatmentTypeConfiguration.cs" />
+    <Compile Include="Configuration\PractitionerExpertiseConfiguration.cs" />
+    <Compile Include="Configuration\PractitionerConfiguration.cs" />
+    <Compile Include="Configuration\SupplierClinicalAuditConfiguration.cs" />
+    <Compile Include="Configuration\SupplierPractitionersConfiguration.cs" />
+    <Compile Include="Configuration\SupplierSearchConfiguration.cs" />
+    <Compile Include="Configuration\RegistrationTypeConfiguration.cs" />
+    <Compile Include="Configuration\SupplierInsuranceConfiguration.cs" />
+    <Compile Include="Configuration\SupplierSiteAuditConfiguration.cs" />
+    <Compile Include="Configuration\SupplierTreatmentPricingConfiguration.cs" />
+    <Compile Include="Configuration\SupplierTreatmentConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentDocumentSetupConfiguration.cs" />
+    <Compile Include="Configuration\DelegatedAuthorisationTypesConfiguration.cs" />
+    <Compile Include="Configuration\DocumentSetupTypesConfiguration.cs" />
+    <Compile Include="Configuration\EmailTypeConfiguration.cs" />
+    <Compile Include="Configuration\PatientConfiguration.cs" />
+    <Compile Include="Configuration\EmailSendingOptionConfiguration.cs" />
+    <Compile Include="Configuration\InvoiceMethodConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentInvoiceConfiguration.cs" />
+    <Compile Include="Configuration\DelegatedAuthorisationConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentAssessmentConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentAuthorisationConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentEmailConfiguration.cs" />
+    <Compile Include="Configuration\ServiceLevelAgreementConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentPricingConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectTreatmentConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerProjectConfiguration.cs" />
+    <Compile Include="Configuration\PricingTypesConfiguration.cs" />
+    <Compile Include="Configuration\ProjectTreatmentSLAConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerConfiguration.cs" />
+    <Compile Include="Configuration\ReferrerLocationConfiguration.cs" />
+    <Compile Include="Configuration\SolicitorConfiguration.cs" />
+    <Compile Include="Configuration\SupplierComplaintConfiguration.cs" />
+    <Compile Include="Configuration\SupplierConfiguration.cs" />
+    <Compile Include="Configuration\SupplierDocumentsConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoriesPricingTypesConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoriesTreatmentTypeConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentCategoryPricingTypesConfiguration.cs" />
+    <Compile Include="Configuration\TreatmentTypeConfiguration.cs" />
+    <Compile Include="Configuration\UserConfiguration.cs" />
+    <Compile Include="Global\GlobalConst.cs" />
+    <Compile Include="Global\RepositoryStoredProcedure.cs" />
+    <Compile Include="Global\Table.cs" />
+    <Compile Include="Global\View.cs" />
+    <Compile Include="ITSDBContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\CaseDocumentRepository.cs" />
+    <Compile Include="Repository\CaseNoteRepository.cs" />
+    <Compile Include="Repository\CasePatientContactAttemptRepository.cs" />
+    <Compile Include="Repository\CasePatientReferrerSupplierRepository.cs" />
+    <Compile Include="Repository\CasePatientRepository.cs" />
+    <Compile Include="Repository\CaseTreatmentPricingRepository.cs" />
+    <Compile Include="Repository\CaseVATRepository.cs" />
+    <Compile Include="Repository\CaseWorkflowCountRepository.cs" />
+    <Compile Include="Repository\CaseAppointmentDateRepository.cs" />
+    <Compile Include="Repository\CaseWorkflowPatientReferrerProjectRepository.cs" />
+    <Compile Include="Repository\ClinicalAuditTotalCountAndPassAuditRepository.cs" />
+    <Compile Include="Repository\CasePatientSupplierPractitionerRepository.cs" />
+    <Compile Include="Repository\CaseAssessmentRatingRepository.cs" />
+    <Compile Include="Repository\CaseStopReasonRepository.cs" />
+    <Compile Include="Repository\CasePatientTreatmentWorkflowRepository.cs" />
+    <Compile Include="Repository\DrugTestRepository.cs" />
+    <Compile Include="Repository\ElRehabRepository.cs" />
+    <Compile Include="Repository\EmployeeDetailRepository.cs" />
+    <Compile Include="Repository\EmploymentRepository.cs" />
+    <Compile Include="Repository\EmploymentTypeRepository.cs" />
+    <Compile Include="Repository\FitForWorkRepository.cs" />
+    <Compile Include="Repository\GenderRepository.cs" />
+    <Compile Include="Repository\GipRepository.cs" />
+    <Compile Include="Repository\IipRepository.cs" />
+    <Compile Include="Repository\InjuredPartyRepresentativeRepository.cs" />
+    <Compile Include="Repository\InjuredRepresentativeOptionRepository.cs" />
+    <Compile Include="Repository\InvoiceRepository.cs" />
+    <Compile Include="Repository\DurationRepository.cs" />
+    <Compile Include="Repository\JobDemandRepository.cs" />
+    <Compile Include="Repository\NetworkRailStandardApplicableRepository.cs" />
+    <Compile Include="Repository\PasswordHistoryRepository.cs" />
+    <Compile Include="Repository\PatientRoleRepository.cs" />
+    <Compile Include="Repository\EmailTypeValueRepository.cs" />
+    <Compile Include="Repository\PolicieRepository.cs" />
+    <Compile Include="Repository\PolicyCriteriaRepository.cs" />
+    <Compile Include="Repository\PolicyOpenDetailRepository.cs" />
+    <Compile Include="Repository\PolicyTypeRepository.cs" />
+    <Compile Include="Repository\PrimaryConditionRepository.cs" />
+    <Compile Include="Repository\ReasonForReferralRepository.cs" />
+    <Compile Include="Repository\ReferrerGroupRepository.cs" />
+    <Compile Include="Repository\ReinsurerRepository.cs" />
+    <Compile Include="Repository\RestrictionRangeRepository.cs" />
+    <Compile Include="Repository\RoleTypeRepository.cs" />
+    <Compile Include="Repository\StrengthTestingRepository.cs" />
+    <Compile Include="Repository\SupplierRegistrationSupplierDocumentRepository.cs" />
+    <Compile Include="Repository\SupplierInsuranceSupplierDocumentRepository.cs" />
+    <Compile Include="Repository\SupplierSiteAuditSupplierDocumentRepository.cs" />
+    <Compile Include="Repository\SupplierClinicalAuditSupplierDocumentRepository.cs" />
+    <Compile Include="Repository\SymptomDescriptionRepository.cs" />
+    <Compile Include="Repository\TpdRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoriesBespokeServiceRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoryBespokeServiceRepository.cs" />
+    <Compile Include="Repository\PracitionerSupplierTreatmentCategoryRepository.cs" />
+    <Compile Include="Repository\PatientLevelOfRecoveryRepository.cs" />
+    <Compile Include="Repository\PatientImpactOnWorkRepository.cs" />
+    <Compile Include="Repository\ProposedTreatmentMethodRepository.cs" />
+    <Compile Include="Repository\ReferrerDocumentRepository.cs" />
+    <Compile Include="Repository\PatientImpactRepository.cs" />
+    <Compile Include="Repository\PatientImpactValueRepository.cs" />
+    <Compile Include="Repository\PatientWorkstatusRepository.cs" />
+    <Compile Include="Repository\PsychologicalFactorRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentTreatmentTypeRepository.cs" />
+    <Compile Include="Repository\SiteAuditTotalCountAndAuditPassRepository.cs" />
+    <Compile Include="Repository\ReferrerAuthorisationsRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentNameRepository.cs" />
+    <Compile Include="Repository\AreasofExpertiseRepository.cs" />
+    <Compile Include="Repository\AssessmentServiceRepository.cs" />
+    <Compile Include="Repository\AssessmentTypeRepository.cs" />
+    <Compile Include="Repository\BankHolidayRepository.cs" />
+    <Compile Include="Repository\CaseHistoryRepository.cs" />
+    <Compile Include="Repository\ComplaintStatusRepository.cs" />
+    <Compile Include="Repository\ComplaintTypeRepository.cs" />
+    <Compile Include="Repository\CaseRepository.cs" />
+    <Compile Include="Repository\PractitionerTreatmentRegistrationRepository.cs" />
+    <Compile Include="Repository\PractitionerRegistrationRepository.cs" />
+    <Compile Include="Repository\SupplierDistanceRankingRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoriesAreasofExpertisesRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoriesRegistrationTypeRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoriesTreatmentTypeRepository.cs" />
+    <Compile Include="Repository\PractitionerExpertiseRepository.cs" />
+    <Compile Include="Repository\PractitionerRepository.cs" />
+    <Compile Include="Repository\SupplierClinicalAuditRepository.cs" />
+    <Compile Include="Repository\SupplierPractitionersRepository.cs" />
+    <Compile Include="Repository\SupplierSearchRepository.cs" />
+    <Compile Include="Repository\RegistrationTypeRepository.cs" />
+    <Compile Include="Repository\SupplierInsuranceRepository.cs" />
+    <Compile Include="Repository\SupplierSiteAuditRepository.cs" />
+    <Compile Include="Repository\SupplierTreatmentPricingRepository.cs" />
+    <Compile Include="Repository\SupplierTreatmentRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentDocumentSetupRepository.cs" />
+    <Compile Include="Repository\DelegatedAuthorisationTypesRepository.cs" />
+    <Compile Include="Repository\DocumentSetupTypesRepository.cs" />
+    <Compile Include="Repository\EmailTypeRepository.cs" />
+    <Compile Include="Repository\PatientRepository.cs" />
+    <Compile Include="Repository\EmailSendingOptionRepository.cs" />
+    <Compile Include="Repository\InvoiceMethodRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentInvoiceRepository.cs" />
+    <Compile Include="Repository\DelegatedAuthorisationRepository.cs" />
+    <Compile Include="Repository\SolicitorRepository.cs" />
+    <Compile Include="Repository\SupplierDocumentsRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentAssessmentRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentAuthorisationRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentEmailRepository.cs" />
+    <Compile Include="Repository\ServiceLevelAgreementRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentPricingRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectTreatmentRepository.cs" />
+    <Compile Include="Repository\ReferrerProjectRepository.cs" />
+    <Compile Include="Repository\ProjectTreatmentSLARepository.cs" />
+    <Compile Include="Repository\PricingTypesRepository.cs" />
+    <Compile Include="Repository\ReferrerLocationRepository.cs" />
+    <Compile Include="Repository\ReferrerRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoriesPricingTypesRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoryPricingTypesRepository.cs" />
+    <Compile Include="Repository\TreatmentCategoryRepository.cs" />
+    <Compile Include="Repository\TreatmentTypeRepository.cs" />
+    <Compile Include="Repository\TypeCoverRepository.cs" />
+    <Compile Include="Repository\UKPostCodeRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\SupplierComplaintRepository.cs" />
+    <Compile Include="Repository\TreatmentPeriodTypeRepository.cs" />
+    <Compile Include="Configuration\RoleTypeConfiguration.cs" />
+    <Compile Include="Configuration\WorkTypeConfiguration.cs" />
+    <Compile Include="Repository\WorkTypeRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Base.Data.SqlServer\Core.Base.Data.SqlServer.csproj">
+      <Project>{DEA53026-1A6C-4F59-A1ED-3D6EC1F51517}</Project>
+      <Name>Core.Base.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Base.Data\Core.Base.Data.csproj">
+      <Project>{C139C3FD-E60D-496A-A711-00962467E3E0}</Project>
+      <Name>Core.Base.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Model\ITS.Core.BL.Model.csproj">
+      <Project>{d1cc16ed-93fe-4444-b2fa-030d2926e431}</Project>
+      <Name>ITS.Core.BL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.Model\ITS.Core.Data.Model.csproj">
+      <Project>{A03953A9-AFB5-42A9-BF54-FD9EBCCC123F}</Project>
+      <Name>ITS.Core.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data\ITS.Core.Data.csproj">
+      <Project>{FB95790E-8FC6-47D4-9FB6-4DD2DE0D11EF}</Project>
+      <Name>ITS.Core.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

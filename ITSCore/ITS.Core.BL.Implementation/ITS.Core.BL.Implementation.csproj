@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38F2EAE8-E871-43BD-85FA-573BFF926A65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITS.Core.BL.Implementation</RootNamespace>
+    <AssemblyName>ITS.Core.BL.Implementation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\..\..\..\Library\External\ValueInjecter\2.1\Omu.ValueInjecter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalTestImpl.cs" />
+    <Compile Include="AdmittedImpl.cs" />
+    <Compile Include="AffectedAreaImpl.cs" />
+    <Compile Include="AreasofExpertiseImpl.cs" />
+    <Compile Include="AssessmentServiceImpl.cs" />
+    <Compile Include="AssessmentTypeImpl.cs" />
+    <Compile Include="Base\Workflow.cs" />
+    <Compile Include="CaseAssessmentCustomImpl.cs" />
+    <Compile Include="CaseAssessmentDetailImpl.cs" />
+    <Compile Include="CaseAssessmentPatientImpactImpl.cs" />
+    <Compile Include="CaseAssessmentPatientInjuryImpl.cs" />
+    <Compile Include="CaseBespokeServicePricingImpl.cs" />
+    <Compile Include="CaseCommunicationHistoryImpl.cs" />
+    <Compile Include="CaseContactImpl.cs" />
+    <Compile Include="CaseHistoryImpl.cs" />
+    <Compile Include="CaseNoteImpl.cs" />
+    <Compile Include="CasePatientImpl.cs" />
+    <Compile Include="CasePatientReferrerSupplierImpl.cs" />
+    <Compile Include="CaseTreatmentPricingImpl.cs" />
+    <Compile Include="CaseVATImpl.cs" />
+    <Compile Include="ComplaintTypeImpl.cs" />
+    <Compile Include="ComplaintStatusImpl.cs" />
+    <Compile Include="CaseImpl.cs" />
+    <Compile Include="CaseWorkflowCountImpl.cs" />
+    <Compile Include="CaseAppointmentDateImpl.cs" />
+    <Compile Include="CaseWorkflowPatientReferrerProjectImpl.cs" />
+    <Compile Include="CasePatientSupplierPractitionerImpl.cs" />
+    <Compile Include="CaseAssessmentImpl.cs" />
+    <Compile Include="CaseAssessmentRatingImpl.cs" />
+    <Compile Include="CaseDocumentImpl.cs" />
+    <Compile Include="CaseStopReasonImpl.cs" />
+    <Compile Include="CasePatientTreatmentWorkflowImpl.cs" />
+    <Compile Include="DrugTestImpl.cs" />
+    <Compile Include="EmployeeDetailImpl.cs" />
+    <Compile Include="EmploymentTypeImpl.cs" />
+    <Compile Include="FitForWorkImpl.cs" />
+    <Compile Include="GenderImpl.cs" />
+    <Compile Include="InjuredPartyRepresentativeImpl.cs" />
+    <Compile Include="InjuredRepresentativeOptionImpl.cs" />
+    <Compile Include="InvoiceImpl.cs" />
+    <Compile Include="DurationImpl.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentDetailExtension.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentProposedTreatmentMethodExtension.cs" />
+    <Compile Include="JobDemandImpl.cs" />
+    <Compile Include="NetworkRailStandardApplicableImpl.cs" />
+    <Compile Include="PasswordHistoryImpl.cs" />
+    <Compile Include="PatientRoleImpl.cs" />
+    <Compile Include="PolicyCriteriaImpl.cs" />
+    <Compile Include="PolicyTypeImpl.cs" />
+    <Compile Include="PrimaryConditionImpl.cs" />
+    <Compile Include="ReasonForReferralImpl.cs" />
+    <Compile Include="ReferrerGroupImpl.cs" />
+    <Compile Include="ReinsurerImpl.cs" />
+    <Compile Include="RestrictionRangeImpl.cs" />
+    <Compile Include="RoleTypeImpl.cs" />
+    <Compile Include="StrengthTestingImpl.cs" />
+    <Compile Include="SupplierRegistrationSupplierDocumentImpl.cs" />
+    <Compile Include="SupplierInsuranceSupplierDocumentImpl.cs" />
+    <Compile Include="SupplierSiteAuditSupplierDocumentImpl.cs" />
+    <Compile Include="SupplierClinicalAuditSupplierDocumentImpl.cs" />
+    <Compile Include="SymptomDescriptionImpl.cs" />
+    <Compile Include="TreatmentCategoriesBespokeServiceImpl.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentRatingExtension.cs" />
+    <Compile Include="TreatmentCategoryBespokeServiceImpl.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentExtension.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentPatientImpactExtension.cs" />
+    <Compile Include="ExtensionMethods\CaseAssessmentPatientInjuryExtension.cs" />
+    <Compile Include="PracitionerSupplierTreatmentCategorympl.cs" />
+    <Compile Include="PatientImpactOnWorkImpl.cs" />
+    <Compile Include="PatientLevelOfRecoveryImpl.cs" />
+    <Compile Include="ProposedTreatmentMethodImpl.cs" />
+    <Compile Include="ReferrerDocumentImpl.cs" />
+    <Compile Include="Global\GlobalConst.cs" />
+    <Compile Include="CasePatientContactAttemptImpl.cs" />
+    <Compile Include="Init\WorkflowInit.cs" />
+    <Compile Include="PatientImpactImpl.cs" />
+    <Compile Include="PatientImpactValueImpl.cs" />
+    <Compile Include="PatientWorkstatusImpl.cs" />
+    <Compile Include="PractitionerTreatmentRegistrationImpl.cs" />
+    <Compile Include="PractitionerRegistrationImpl.cs" />
+    <Compile Include="PsychologicalFactorImpl.cs" />
+    <Compile Include="ReferrerAuthorisationsImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentNameImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentTreatmentTypeImpl.cs" />
+    <Compile Include="TreatmentCategoriesAreasofExpertiseImpl.cs" />
+    <Compile Include="TreatmentCategoriesRegistrationTypeImpl.cs" />
+    <Compile Include="TreatmentCategoriesTreatmentTypeImpl.cs" />
+    <Compile Include="PractitionerImpl.cs" />
+    <Compile Include="PractitionerExpertiseImpl.cs" />
+    <Compile Include="SupplierClinicalAuditImpl.cs" />
+    <Compile Include="SupplierPractitionersImpl.cs" />
+    <Compile Include="SupplierSearchImpl.cs" />
+    <Compile Include="RegistrationTypeImpl.cs" />
+    <Compile Include="SupplierInsuranceImpl.cs" />
+    <Compile Include="SupplierSiteAuditImpl.cs" />
+    <Compile Include="SupplierTreatmentPricingImpl.cs" />
+    <Compile Include="SupplierTreatmentImpl.cs" />
+    <Compile Include="ServiceLevelAgreementImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentDocumentSetupImpl.cs" />
+    <Compile Include="DelegatedAuthorisationTypesImpl.cs" />
+    <Compile Include="DocumentSetupTypesImpl.cs" />
+    <Compile Include="EmailTypeImpl.cs" />
+    <Compile Include="PatientImpl.cs" />
+    <Compile Include="EmailSendingOptionImpl.cs" />
+    <Compile Include="SolicitorImpl.cs" />
+    <Compile Include="SupplierComplaintImpl.cs" />
+    <Compile Include="SupplierDocumentsImpl.cs" />
+    <Compile Include="TreatmentCategoriesPricingTypesImpl.cs" />
+    <Compile Include="InvoiceMethodImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentInvoiceImpl.cs" />
+    <Compile Include="DelegatedAuthorisationImpl.cs" />
+    <Compile Include="ProjectTreatmentSLAImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentAssessmentImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentAuthorisationImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentEmailImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentImpl.cs" />
+    <Compile Include="PricingTypesImpl.cs" />
+    <Compile Include="ReferrerImpl.cs" />
+    <Compile Include="ReferrerLocationImpl.cs" />
+    <Compile Include="ReferrerProjectImpl.cs" />
+    <Compile Include="ReferrerProjectTreatmentPricingImpl.cs" />
+    <Compile Include="SupplierImpl.cs" />
+    <Compile Include="TreatmentCategoryImpl.cs" />
+    <Compile Include="TreatmentCategoryPricingTypesImpl.cs" />
+    <Compile Include="TreatmentPeriodTypeImpl.cs" />
+    <Compile Include="TreatmentTypeImpl.cs" />
+    <Compile Include="TypeCoverImpl.cs" />
+    <Compile Include="UKPostCodeImpl.cs" />
+    <Compile Include="UserImpl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Init\Engine.cs" />
+    <Compile Include="WorkflowEngine\AuthorisationSendToInnovateWorkflow.cs" />
+    <Compile Include="WorkflowEngine\AuthorisationSendToSupplierWorkflow.cs" />
+    <Compile Include="WorkflowEngine\AuthorisationSenttoInnovateCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\AuthorisationSenttoSupplierOrPatientinTreatmentCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\AuthorisationSenttoSupplierOrPatientinTreatmentWorkflow.cs" />
+    <Compile Include="WorkflowEngine\CaseCompleteWorkflow.cs" />
+    <Compile Include="WorkflowEngine\CaseStopSendToSupplierWorkflow.cs" />
+    <Compile Include="WorkflowEngine\CaseStopWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentReportNotAcceptedCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentReportNotAcceptedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentReportSubmittedtoInnovateCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentReportSubmittedtoReferrerCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentReportSubmitToReferrerWorkflow.cs" />
+    <Compile Include="WorkflowEngine\FinalAssessmentSubmitToInnovateWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentAttendedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentBookedCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentBookWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentReportSubmittedtoReferrerOrAwaitingAuthorisationCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentReportSubmittedtoReferrerOrAwaitingAuthorisationWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentReportSubmitToReferrerWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentSubmittedtoInnovateCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentSubmitToInnovateWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InitialAssessmentSupplierCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\InvoiceSendWorkflow.cs" />
+    <Compile Include="WorkflowEngine\PatientContactedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\PatientInTreatmentCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\PatientInTreatmentWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReferralAcceptWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReferralSubmittedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\RefertoSupplierWorkflow.cs" />
+    <Compile Include="WorkflowEngine\RefertoTriageSupplierWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReportNotAcceptedCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReportNotAcceptWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentAttendedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportNotAcceptedCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportNotAcceptedWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportSubmittedtoInnovateCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportSubmittedtoInnovateWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportSubmittedtoReferrerCustomWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentReportSubmitToReferrerWorkflow.cs" />
+    <Compile Include="WorkflowEngine\ReviewAssessmentSubmitToInnovateWorkflow.cs" />
+    <Compile Include="WorkflowEngine\TreatmentModificationSendToSupplierWorkflow.cs" />
+    <Compile Include="WorkflowEngine\TriageAssessmentSubmitToInnovateWorkflow.cs" />
+    <Compile Include="WorkTypeImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Base.Data\Core.Base.Data.csproj">
+      <Project>{C139C3FD-E60D-496A-A711-00962467E3E0}</Project>
+      <Name>Core.Base.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Model\ITS.Core.BL.Model.csproj">
+      <Project>{D1CC16ED-93FE-4444-B2FA-030D2926E431}</Project>
+      <Name>ITS.Core.BL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL\ITS.Core.BL.csproj">
+      <Project>{64F4BC7F-E138-426B-8675-B95A610AD98C}</Project>
+      <Name>ITS.Core.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.Model\ITS.Core.Data.Model.csproj">
+      <Project>{A03953A9-AFB5-42A9-BF54-FD9EBCCC123F}</Project>
+      <Name>ITS.Core.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.SqlServer\ITS.Core.Data.SqlServer.csproj">
+      <Project>{D74377EF-667C-4F09-90C8-336318E9C8D8}</Project>
+      <Name>ITS.Core.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data\ITS.Core.Data.csproj">
+      <Project>{FB95790E-8FC6-47D4-9FB6-4DD2DE0D11EF}</Project>
+      <Name>ITS.Core.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

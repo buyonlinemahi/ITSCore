@@ -1,0 +1,24 @@
+﻿<#@ template language="C#" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Core.Base.Data.SqlServer;
+
+namespace <#=this.NameSpace#>.Core.Data.SqlServer.Factory
+{
+    public class ContextFactory : Disposable, IContextFactory
+    {
+        private <#=this.DBContextName#> dataContext;
+        public <#=this.DBContextName#> Get()
+        {
+            return dataContext ?? (dataContext = new <#=this.DBContextName#>());
+        }
+
+        protected override void DisposeCore()
+        {
+            if (dataContext != null)
+                dataContext.Dispose();
+        }
+    }
+}

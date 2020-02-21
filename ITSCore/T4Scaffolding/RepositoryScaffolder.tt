@@ -1,0 +1,99 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="Shared\Repository.ttinclude" #>
+<#@ include file="Shared\FileHelper.ttinclude" #>
+<#@ import namespace="T4Scaffolding.DBContext" #>
+<#@ import namespace="T4Scaffolding.ContextFactory" #>
+<#@ import namespace="T4Scaffolding.Configuration" #>
+<#@ assembly name="C:\Users\ftan\Documents\Visual Studio 2010\Projects\ITSCore\Lib\T4Scaffolding.dll" #> //change this to where your .dll is
+<#
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // +++ Model
+    //
+    // To use:
+    // modify the collection repositories below, usage: RepositoryDefinition(ClassName of the model, BaseNameSpace) i.e "FrequencyType" would be the classname of the model and BaseNameSpace for ITS.Core.Model would be "ITS"
+    // 
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    string dbcontextName = "ITS";
+	string dbContextBaseNameSpace = "ITS";
+	bool generateDBContext = true; //set to true to generate dbcontext class
+
+	var Repositories = new []
+    {
+        RepositoryDefinition ("CaseWorkflowPatientReferrerProject", dbContextBaseNameSpace),
+
+    };
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#>
+
+<#
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // +++ Template
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+	foreach (var repository in Repositories)
+    {
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using <#=repository.BaseNameSpace#>.Core.Data.Model;
+using Core.Base.Data.SqlServer;
+using Core.Base.Data.SqlServer.Repository;
+using Core.Base.Data.SqlServer.Factory;
+
+namespace <#=repository.BaseNameSpace#>.Core.Data.SqlServer.Repository
+{
+	public class <#=repository.RepositoryName#> : BaseRepository<<#=repository.ClassName#>, <#=dbContextBaseNameSpace#>DBContext>, <#=repository.InterfaceRepositoryName#> 
+	{
+		public <#=repository.RepositoryName#>(IContextFactory<<#=dbContextBaseNameSpace#>DBContext> contextFactory) :
+            base(new BaseUnitOfWork<<#=dbContextBaseNameSpace#>DBContext>(contextFactory), contextFactory)
+        {
+        }
+
+	}
+}
+
+<#
+	 SaveOutput(string.Format("Repository/{0}.cs", repository.RepositoryName));
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Core.Base.Data;
+using <#=repository.BaseNameSpace#>.Core.Data.Model;
+namespace <#=repository.BaseNameSpace#>.Core.Data
+{
+	public interface <#=repository.InterfaceRepositoryName#> : IBaseRepository<<#=repository.ClassName#>>
+	{
+	}
+}
+<#
+	 SaveOutput(string.Format("{0}.cs", repository.InterfaceRepositoryName));
+	 
+	 ConfigurationTemplate configuration = new ConfigurationTemplate(repository.ClassName, repository.BaseNameSpace);
+	 this.Write(configuration.TransformText());
+	 SaveOutput(string.Format("Configuration/{0}", configuration.FileName));
+	 }
+#>
+<#
+	if(generateDBContext)
+	{
+		DBContextTemplate dbContextTemplate = new DBContextTemplate(dbcontextName, dbContextBaseNameSpace);
+		DBContextFactoryTemplate dbContextFactoryTemplate = new DBContextFactoryTemplate(dbcontextName,dbContextBaseNameSpace);
+		IDBContextFactoryTemplate idbContextFactoryTemplate = new IDBContextFactoryTemplate(dbcontextName,dbContextBaseNameSpace);
+
+		this.Write(dbContextTemplate.TransformText());
+		SaveOutput(string.Format("{0}.cs", dbContextTemplate.DBContextName));
+
+		this.Write(dbContextFactoryTemplate.TransformText());
+		SaveOutput(string.Format("Factory/{0}", dbContextFactoryTemplate.FileName));
+
+		this.Write(idbContextFactoryTemplate.TransformText());
+		SaveOutput(string.Format("Factory/{0}", idbContextFactoryTemplate.FileName));
+	}
+#>

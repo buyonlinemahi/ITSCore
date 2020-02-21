@@ -1,0 +1,4 @@
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL.Model\bin\Debug\ITS.Core.BL.Model.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL.Model\bin\Debug\ITS.Core.BL.Model.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL.Model\obj\Debug\ITS.Core.BL.Model.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL.Model\obj\Debug\ITS.Core.BL.Model.pdb

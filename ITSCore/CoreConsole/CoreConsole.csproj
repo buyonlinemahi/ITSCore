@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C754CDD-7736-4071-855C-7FECAC8F4F26}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreConsole</RootNamespace>
+    <AssemblyName>CoreConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Library\External\EntityFramework\4.3\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Base.Data.SqlServer\Core.Base.Data.SqlServer.csproj">
+      <Project>{DEA53026-1A6C-4F59-A1ED-3D6EC1F51517}</Project>
+      <Name>Core.Base.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Base.Data\Core.Base.Data.csproj">
+      <Project>{C139C3FD-E60D-496A-A711-00962467E3E0}</Project>
+      <Name>Core.Base.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Implementation\ITS.Core.BL.Implementation.csproj">
+      <Project>{38F2EAE8-E871-43BD-85FA-573BFF926A65}</Project>
+      <Name>ITS.Core.BL.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Model\ITS.Core.BL.Model.csproj">
+      <Project>{D1CC16ED-93FE-4444-B2FA-030D2926E431}</Project>
+      <Name>ITS.Core.BL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL\ITS.Core.BL.csproj">
+      <Project>{64F4BC7F-E138-426B-8675-B95A610AD98C}</Project>
+      <Name>ITS.Core.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.Model\ITS.Core.Data.Model.csproj">
+      <Project>{A03953A9-AFB5-42A9-BF54-FD9EBCCC123F}</Project>
+      <Name>ITS.Core.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.SqlServer\ITS.Core.Data.SqlServer.csproj">
+      <Project>{D74377EF-667C-4F09-90C8-336318E9C8D8}</Project>
+      <Name>ITS.Core.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data\ITS.Core.Data.csproj">
+      <Project>{FB95790E-8FC6-47D4-9FB6-4DD2DE0D11EF}</Project>
+      <Name>ITS.Core.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

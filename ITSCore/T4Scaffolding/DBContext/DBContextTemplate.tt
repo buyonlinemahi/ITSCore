@@ -1,0 +1,24 @@
+﻿<#@ template language="C#" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.Entity;
+using <#=this.NameSpace#>.Core.Data.SqlServer.Configuration;
+
+namespace <#=this.NameSpace#>.Core.Data.SqlServer
+{
+	public class <#=this.DBContextName#> : DbContext
+    {
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+
+        public virtual void Save()
+        {
+            base.SaveChanges();
+        }
+    }
+}
+

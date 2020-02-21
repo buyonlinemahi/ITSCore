@@ -1,0 +1,9 @@
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.BL.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.BL.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.BL.Model.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.Data.Model.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.BL.Model.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\bin\Debug\ITS.Core.Data.Model.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\obj\Debug\ITS.Core.BL.csprojResolveAssemblyReference.cache
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\obj\Debug\ITS.Core.BL.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\ITS.Core.BL\obj\Debug\ITS.Core.BL.pdb

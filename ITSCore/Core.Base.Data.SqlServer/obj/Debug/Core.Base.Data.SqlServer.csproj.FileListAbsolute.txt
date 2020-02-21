@@ -1,0 +1,8 @@
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\bin\Debug\Core.Base.Data.SqlServer.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\bin\Debug\Core.Base.Data.SqlServer.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\bin\Debug\Core.Base.Data.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\bin\Debug\EntityFramework.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\bin\Debug\Core.Base.Data.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\obj\Debug\Core.Base.Data.SqlServer.csprojResolveAssemblyReference.cache
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\obj\Debug\Core.Base.Data.SqlServer.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\Core.Base.Data.SqlServer\obj\Debug\Core.Base.Data.SqlServer.pdb

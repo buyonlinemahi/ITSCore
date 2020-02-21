@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45E80E5B-268E-4389-909D-5F2DE8AB41BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreTest</RootNamespace>
+    <AssemblyName>CoreTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Library\External\EntityFramework\4.3\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AffectedAreaTest.cs" />
+    <Compile Include="AreasofExpertiseTest.cs" />
+    <Compile Include="AssessmentServiceTest.cs" />
+    <Compile Include="AssessmentTypeTest.cs" />
+    <Compile Include="CaseAssessmentCustomTest.cs" />
+    <Compile Include="CaseAssessmentDetailTest.cs" />
+    <Compile Include="CaseAssessmentPatientImpactTest.cs" />
+    <Compile Include="CaseAssessmentProposedTreatmentMethodHistoryTest.cs" />
+    <Compile Include="CaseAssessmentProposedTreatmentMethodTest.cs" />
+    <Compile Include="CaseAssessmentTotalCountAndRatingTest.cs" />
+    <Compile Include="CaseBespokeServicePricingTest.cs" />
+    <Compile Include="CaseCommunicationHistoryTest.cs" />
+    <Compile Include="CaseContactTest.cs" />
+    <Compile Include="CaseHistoryTest.cs" />
+    <Compile Include="CaseNoteTest.cs" />
+    <Compile Include="CasePatientContactAttemptTest.cs" />
+    <Compile Include="CasePatientReferrerSupplierTest.cs" />
+    <Compile Include="CaseVATTest.cs" />
+    <Compile Include="ComplaintStatusTest.cs" />
+    <Compile Include="ComplaintTypeTest.cs" />
+    <Compile Include="CaseTest.cs" />
+    <Compile Include="CaseWorkflowCountTest.cs" />
+    <Compile Include="CaseAppointmentDateTest.cs" />
+    <Compile Include="ClinicalAuditTotalCountAndPassAuditTest.cs" />
+    <Compile Include="CaseWorkflowPatientReferrerProjectTest.cs" />
+    <Compile Include="CasePatientSupplierPractitionerTest.cs" />
+    <Compile Include="CaseAssessmentTest.cs" />
+    <Compile Include="CaseAssessmentRatingTest.cs" />
+    <Compile Include="CasePatientTest.cs" />
+    <Compile Include="CaseAssessmentPatientInjuryTest.cs" />
+    <Compile Include="CaseTreatmentPricingTest.cs" />
+    <Compile Include="CaseDocumentTest.cs" />
+    <Compile Include="CaseStopReasonTest.cs" />
+    <Compile Include="CasePatientTreatmentWorkflowTest.cs" />
+    <Compile Include="EmployeeDetailTest.cs" />
+    <Compile Include="InjuredPartyRepresentativeTest.cs" />
+    <Compile Include="InjuredRepresentativeOptionTest.cs" />
+    <Compile Include="InvoiceTest.cs" />
+    <Compile Include="DurationTest.cs" />
+    <Compile Include="JobDemandTest.cs" />
+    <Compile Include="PatientRoleTest.cs" />
+    <Compile Include="EmailTypeValueTest.cs" />
+    <Compile Include="PolicyOpenClassTest.cs" />
+    <Compile Include="ReferrerGroupTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentEmailImpl.cs" />
+    <Compile Include="RestrictionRangeTest.cs" />
+    <Compile Include="StrengthTestingTest.cs" />
+    <Compile Include="SupplierRegistrationSupplierDocumentTest.cs" />
+    <Compile Include="SupplierInsuranceSupplierDocumentTest.cs" />
+    <Compile Include="SupplierSiteAuditSupplierDocumentTest.cs" />
+    <Compile Include="SupplierClinicalAuditSupplierDocumentTest.cs" />
+    <Compile Include="SymptomDescriptionTest.cs" />
+    <Compile Include="TreatmentCategoriesBespokeServiceTest.cs" />
+    <Compile Include="TreatmentCategoryBespokeServiceTest.cs" />
+    <Compile Include="PracitionerSupplierTreatmentCategoryTest.cs" />
+    <Compile Include="PatientImpactOnWorkTest.cs" />
+    <Compile Include="ProposedTreatmentMethodTest.cs" />
+    <Compile Include="PatientLevelOfRecoveryTest.cs" />
+    <Compile Include="ReferrerDocumentTest.cs" />
+    <Compile Include="PatientImpactTest.cs" />
+    <Compile Include="PatientImpactValueTest.cs" />
+    <Compile Include="PatientWorkstatusTest.cs" />
+    <Compile Include="PsychologicalFactorTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentTreatmentTypeTest.cs" />
+    <Compile Include="SiteAuditTotalCountAndAuditPassTest.cs" />
+    <Compile Include="PractitionerTreatmentRegistrationsTest.cs" />
+    <Compile Include="PractitionerRegistrationTest.cs" />
+    <Compile Include="ReferrerAuthorisationsTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentNameTest.cs" />
+    <Compile Include="SupplierDistanceRankingTest.cs" />
+    <Compile Include="TreatmentCategoriesAreasofExpertiseTest.cs" />
+    <Compile Include="TreatmentCategoriesPricingTypesTest.cs" />
+    <Compile Include="TreatmentCategoriesRegistrationTypesTest.cs" />
+    <Compile Include="TreatmentCategoriesTreatmentTypeTest.cs" />
+    <Compile Include="PractitionerExpertiseTest.cs" />
+    <Compile Include="PractitionerTest.cs" />
+    <Compile Include="SupplierClinicalAuditTest.cs" />
+    <Compile Include="SupplierPractitionersTest.cs" />
+    <Compile Include="SupplierSearchTest.cs" />
+    <Compile Include="RegistrationTypeTest.cs" />
+    <Compile Include="SupplierInsuranceTest.cs" />
+    <Compile Include="SupplierSiteAuditTest.cs" />
+    <Compile Include="SupplierTreatmentPricingTest.cs" />
+    <Compile Include="SupplierTreatmentTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentDocumentSetupTest.cs" />
+    <Compile Include="DelegatedAuthorisationTypesTest.cs" />
+    <Compile Include="DocumentSetupTypesTest.cs" />
+    <Compile Include="EmailTypeTest.cs" />
+    <Compile Include="PatientRepositoryTest.cs" />
+    <Compile Include="EmailSendingOptionTest.cs" />
+    <Compile Include="InvoiceMethodTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentInvoiceTest.cs" />
+    <Compile Include="DelegatedAuthorisationTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentAssessmentTest.cs" />
+    <Compile Include="ReferrerprojectTreatmentauthorisationTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentEmailTest.cs" />
+    <Compile Include="ServiceLevelAgreementTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentPricingTest.cs" />
+    <Compile Include="ReferrerProjectTreatmentTest.cs" />
+    <Compile Include="ReferrerProjectTest.cs" />
+    <Compile Include="ProjectTreatmentSLATest.cs" />
+    <Compile Include="PricingTypes.cs" />
+    <Compile Include="SolicitorTest.cs" />
+    <Compile Include="SupplierComplaintTest.cs" />
+    <Compile Include="SupplierDocumentsTest.cs" />
+    <Compile Include="SupplierTest.cs" />
+    <Compile Include="TreatmentCategoryPricingTypesTest.cs" />
+    <Compile Include="TreatmentCategoryTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferrerLocationRepositoryTest.cs" />
+    <Compile Include="ReferrerRepositoryTest.cs" />
+    <Compile Include="TreatmentPeriodTypeTest.cs" />
+    <Compile Include="TreatmentTypeTest.cs" />
+    <Compile Include="BankHolidayTest.cs" />
+    <Compile Include="UKPostCodeTest.cs" />
+    <Compile Include="PrimaryConditionTest.cs" />
+    <Compile Include="PasswordHistoryTest.cs" />
+    <Compile Include="DrugTestTest.cs" />
+    <Compile Include="UserRepositoryTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Base.Data.SqlServer\Core.Base.Data.SqlServer.csproj">
+      <Project>{DEA53026-1A6C-4F59-A1ED-3D6EC1F51517}</Project>
+      <Name>Core.Base.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core.Base.Data\Core.Base.Data.csproj">
+      <Project>{C139C3FD-E60D-496A-A711-00962467E3E0}</Project>
+      <Name>Core.Base.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Implementation\ITS.Core.BL.Implementation.csproj">
+      <Project>{38F2EAE8-E871-43BD-85FA-573BFF926A65}</Project>
+      <Name>ITS.Core.BL.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL.Model\ITS.Core.BL.Model.csproj">
+      <Project>{D1CC16ED-93FE-4444-B2FA-030D2926E431}</Project>
+      <Name>ITS.Core.BL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.BL\ITS.Core.BL.csproj">
+      <Project>{64F4BC7F-E138-426B-8675-B95A610AD98C}</Project>
+      <Name>ITS.Core.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.Model\ITS.Core.Data.Model.csproj">
+      <Project>{A03953A9-AFB5-42A9-BF54-FD9EBCCC123F}</Project>
+      <Name>ITS.Core.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data.SqlServer\ITS.Core.Data.SqlServer.csproj">
+      <Project>{D74377EF-667C-4F09-90C8-336318E9C8D8}</Project>
+      <Name>ITS.Core.Data.SqlServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITS.Core.Data\ITS.Core.Data.csproj">
+      <Project>{FB95790E-8FC6-47D4-9FB6-4DD2DE0D11EF}</Project>
+      <Name>ITS.Core.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

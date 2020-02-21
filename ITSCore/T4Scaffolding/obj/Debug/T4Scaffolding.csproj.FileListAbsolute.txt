@@ -1,0 +1,7 @@
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\bin\Debug\T4Scaffolding.dll.config
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\bin\Debug\T4Scaffolding.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\bin\Debug\T4Scaffolding.pdb
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\bin\Debug\EntityFramework.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\bin\Debug\EntityFramework.xml
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\obj\Debug\T4Scaffolding.dll
+D:\Mahi_TFS\ITS\Core\ITSCore\T4Scaffolding\obj\Debug\T4Scaffolding.pdb

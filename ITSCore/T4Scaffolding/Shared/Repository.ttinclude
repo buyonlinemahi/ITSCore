@@ -1,0 +1,59 @@
+﻿<#@ template    language="C#" hostspecific="true"   #>
+<#@ output      extension=".cs" #>
+<#+
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // The template code tag \<#+ allows developers to add helper classes and methods.
+    // \<#+ is located at the end of the template file. Multiple tags are allowed.
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    class Repository
+    {
+        public string Name      ;
+        public string BaseName  ;
+		public string NameSpace;
+
+        public string ClassName
+        {
+            get
+            {
+                return Name;
+            }
+        }
+
+        public string RepositoryName
+        {
+            get
+            {
+                return Name + "Repository";
+            }
+        }
+
+		public string InterfaceRepositoryName
+		{
+			get
+			{
+				return string.Format("I{0}Repository", Name);
+			}
+		}
+
+		 public string BaseNameSpace
+		 {
+			 get
+			 {
+				 return NameSpace;
+			 }
+		 }
+    }
+
+    Repository RepositoryDefinition (string name, string @namespace)
+    {
+        return new Repository
+        {
+            Name = name,
+			NameSpace = @namespace
+        };
+    }
+
+	 
+#>
+
+
